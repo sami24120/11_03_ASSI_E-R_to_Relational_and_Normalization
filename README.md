@@ -1,6 +1,9 @@
 # 11_03_ASSI_E-R_to_Relational_and_Normalization
 
+Authors
 
+**Kevin Coaquira Choquecallata**  
+**Sami Said Benyacoub Sandeur**  
 
 INDICE
 
