@@ -36,5 +36,5 @@ Este es el modelo Relacional
 
 DDL 
 
-El DDL de este modelo  Relacional  y los inserts que hemos realizado estan situado en la carpeta @BBDD 
+El DDL de este modelo  Relacional  y los inserts que hemos realizado estan situado en la carpeta BBDD 
 
