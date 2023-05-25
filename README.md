@@ -93,8 +93,27 @@ Aqui creamos 2 tablas. La tabla Players y una nueva tabla que enlaza con la rela
 Aqui tenemos:
 - Arbitraje(**id**,name,faltas_por_partido)
 - Partidos(**code**,game_Date,idArbitraje)
-  - idArbitraje: FOREIGN KEY de Arbitraje(id)
-
+  - idArbitraje: FOREIGN KEY de Arbitraje(id)  
+![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/ff884f55-648f-4d74-b12c-cbb2d580e8cf)  
+Aqui tenemos:  
+- Stadium(**id**,name_stadium)
+- Teams(**id**,ciudadFundada,name_stadium,name_team)
+- Team_Has_Stadium(idStadium,idTeams)
+  - idStadium: FOREIGN KEY de Stadium(id)
+  - idTeams: FOREIGN KEY de Teams(id)  
+  
+  ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/2cfa7130-c60f-4ed0-bc04-bab3b02aafcd)  
+Aqui tenemos:  
+- Partidos(**code**,game_date,name_team)
+- Teams(**id**,name_team,ciudadFundada,name_stadium)
+- Partidos_Local_Teams(codePartidos,idTeams)
+  - codePartidos: FOREIGN KEY de Partidos(code)
+  - idTeams: FOREIGN KEY de Teams(id)
+- Partidos_Visitante_Local(codePartidos,idTeams)
+  - codePartidos: FOREIGN KEY de Partidos(code)
+  - idTeams: FOREIGN KEY de Teams(id)  
+Creamos una nueva tabla donde se almacenan las claves primarias de las dos entidades que participan en la relación. Las claves primarias de las entidades también serán claves primarias de la nueva tabla.
+  
 
 ----------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------
