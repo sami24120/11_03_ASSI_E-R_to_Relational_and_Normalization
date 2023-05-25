@@ -33,12 +33,13 @@ Este es el modelo Relacional
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
--
+
 
 # DDL 
 
-En la carpeta BBDD hay dos archivos:
+En la carpeta `BBDD` hay dos archivos:
 
-El archivo DDL.sql es donde hemos creado las tablas
-El archivo Insertar.sql es el script para rellenar las tablas 
+El `archivo DDL.sql` es donde hemos creado las tablas
+
+El archivo `Insertar.sql `es el script para rellenar las tablas 
 
