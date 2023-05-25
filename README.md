@@ -26,5 +26,9 @@ Este es el diagrama Entidad Relacion en el que hemos hecho el trabajo
 
 Este es el modelo Relacional 
 
-![relacional](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/116269453/ef8293ff-b1fc-4a8f-85d8-8c1cadbd2692)
+
+![rel  ](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/116269453/67833e20-9d5d-4166-9877-76683c410f0c)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
