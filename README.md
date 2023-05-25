@@ -72,6 +72,10 @@ Aqui tenemos:
 - Teams(**id**,name_team,name_stadium,ciudadFundada)
 - Seasons(**code**,date)
 - Presidente(**id**,name,dni,birth_date,año_seleccionado,equipo_lidera)  
+- Teams_Has_Seasons_Has_Presidente(idTeams,codeSeasons,idPresidente)  
+  - idTeams: FOREIGN KEY de Teams(id)
+  - codeSeasons: FOREIGN KEY de Seasons(code)  
+  - idPresidente: FOREIGN KEY de Presidente(id)
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/17afce37-103d-4925-a8e5-5c2e71dd500a)  
 Aqui tenemos:
 - Stadium(**id**,name_Stadium)
@@ -85,6 +89,11 @@ Aqui tenemos:
   - idPlayers: FOREIGN KEY de Players(id)
   - idIdol: FOREIGN KEY de Player(id)  
 Aqui creamos 2 tablas. La tabla Players y una nueva tabla que enlaza con la relacion llamada Players_Idol_Players  
+![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/5b311234-eb86-4a5e-8c0d-be1959d65449)  
+Aqui tenemos:
+- Arbitraje(**id**,name,faltas_por_partido)
+- Partidos(**code**,game_Date,idArbitraje)
+  - idArbitraje: FOREIGN KEY de Arbitraje(id)
 
 
 ----------------------------------------------------------------------------------------
