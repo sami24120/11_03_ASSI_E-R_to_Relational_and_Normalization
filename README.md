@@ -3,7 +3,7 @@
 Authors
 
 **Kevin Coaquira Choquecallata**  
-**Sami Said Benyacoub Sandeur**  
+**Sami Said Benyacoub Manseur**  
 
 INDICE
 
