@@ -33,14 +33,16 @@ Este es el modelo Relacional
 
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/6c1cfb32-1f29-4796-929a-c99d8470a3ea)  
 Aqui tenemos:  
-- Entradas(**code**,id_personas,precio)
+- Entradas(**code**,id_personas,precio,codePartido)
   - id_personas: FOREIGN KEY de Personas(id)  
+  - codePartido: FOREIGN KEY de Partidos(code) 
 - Personas(**id**,name,phone_number)  
 
 
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/2bc72a18-b48c-427c-b655-fe94cd9d4910)
 Aqui tenemos:
-- Partidos(**code**,name_team,game_date)  
+- Partidos(**code**,name_team,game_date, idArbitraje)
+  - idArbitraje: FOREIGN KEY de Arbitraje(id)  
 - Entradas(**code**,*codePartidos*)  
  - codePartidos: FOREIGN KEY de Partidos(*code*)  
 Las relaciones con cardinalidad 1:N no generan una tabla. La clave primaria de la entidad que participa en la relación con cardinalidad 1 se guarda en la tabla de la entidad que participa con cardinalidad N.  
