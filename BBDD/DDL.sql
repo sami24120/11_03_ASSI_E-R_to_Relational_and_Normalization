@@ -7,16 +7,12 @@ CREATE TABLE Personas (
 CREATE TABLE Entradas (
   code INT PRIMARY KEY,
   codePartidos INT,
-  FOREIGN KEY (codePartidos) REFERENCES Partidos(code)
+  precio DECIMAL,
+  id_personas INT,
+  FOREIGN KEY (codePartidos) REFERENCES Partidos(code),
+  FOREIGN KEY (id_personas) REFERENCES Partidos(id)
 );
 
-CREATE TABLE PERSONA_BUY_ENTRADAS (
-  codeEntradas INT,
-  idPersonas INT,
-  precio DECIMAL(10, 2),
-  FOREIGN KEY (codeEntradas) REFERENCES Entradas(code),
-  FOREIGN KEY (idPersonas) REFERENCES Personas(id)
-);
 
 CREATE TABLE Partidos (
   code INT PRIMARY KEY,
@@ -25,7 +21,7 @@ CREATE TABLE Partidos (
   idArbitraje INT,
   FOREIGN KEY (idPartidos) REFERENCES Arbitraje(id)
 );
-
+// Hay que modificar
 CREATE TABLE Partidos_Local_Teams(
   codePartido INT,
   idTeams INT,
@@ -47,6 +43,7 @@ CREATE TABLE Arbitraje(
 );
 
 CREATE TABLE Goles (
+  id INT PRIMARY KEY,
   goles_por_jugador INT,
   minute_gol INT,
   codePartidos INT,
