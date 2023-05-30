@@ -34,7 +34,7 @@ Este es el modelo Relacional
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/6c1cfb32-1f29-4796-929a-c99d8470a3ea)  
 Aqui tenemos:  
 - Entradas(**code**,id_personas,precio)
-  -id_personas: FOREIGN KEY de Personas(id)  
+  - id_personas: FOREIGN KEY de Personas(id)  
 - Personas(**id**,name,phone_number)  
 
 
