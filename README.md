@@ -87,8 +87,7 @@ Aqui creamos 2 tablas. La tabla Players y una nueva tabla que enlaza con la rela
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/5b311234-eb86-4a5e-8c0d-be1959d65449)  
 Aqui tenemos:
 - Arbitraje(**id**,name,faltas_por_partido)
-- Partidos(**code**,game_Date,idArbitraje)
-  - idArbitraje: FOREIGN KEY de Arbitraje(id)  
+
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/ff884f55-648f-4d74-b12c-cbb2d580e8cf)  
 Aqui tenemos:  
 - Team_Has_Stadium(**idStadium**,**idTeams**)
