@@ -45,7 +45,7 @@ Aqui tenemos:
  - codePartidos: FOREIGN KEY de Partidos(*code*)  
 Las relaciones con cardinalidad 1:N no generan una tabla. La clave primaria de la entidad que participa en la relación con cardinalidad 1 se guarda en la tabla de la entidad que participa con cardinalidad N.  
 
-![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/a3915432-e6d2-4209-99c0-7416c68f0a2a)  
+![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/f7d636bb-a02e-4460-948d-75ca902f8467)  
 Aqui tenemos:  
 - Partidos(**code**,name_team,game_date)  
 - Goles(**id**,goles_por_jugador,minute_gol,*codePartidos*)  
