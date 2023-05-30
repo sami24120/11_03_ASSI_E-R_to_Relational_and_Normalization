@@ -55,7 +55,7 @@ Las relaciones con cardinalidad 1:N no generan una tabla. La clave primaria de l
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/ddfb9444-6998-4fad-b93d-d6d836691fb6)  
 Aqui tenemos:  
 - Players(**id**,posicion_Campo,nombre,birth_Date)
-- Portero(*idPlayers*,gol_por_partido,Paradas_por_partido)  
+- Portero(**id**, *idPlayers*,gol_por_partido,Paradas_por_partido)  
    -idPlayers: FOREIGN KEY de Players(*id*)
 - Jugador_de_Campo(*idPlayers*,Gol_por_partido,Minutos_jugados)  
   -idPlayers: FOREIGN KEY de Players(*id*)  
