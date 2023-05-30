@@ -51,7 +51,7 @@ Aqui tenemos:
   - codePartidos: FOREIGN KEY de Partidos(*code*)  
 Las relaciones con cardinalidad 1:N no generan una tabla. La clave primaria de la entidad que participa en la relación con cardinalidad 1 se guarda en la tabla de la entidad que participa con cardinalidad N.  
 
-![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/1810f1ff-548c-45d6-a6e0-5d1fa70494b0)  
+![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/fa58d5e8-6a2d-4d5b-9ce5-e54300c3e201)  
 Aqui tenemos:  
 - Players(**id**,posicion_Campo,nombre,birth_Date,*idTeams*)
   - idTeams:FOREIGN KEY de Teams(id)
@@ -78,7 +78,7 @@ Aqui tenemos:
 - Seat(**id**,nºseat,**idStadium**)
   - idStadium: FOREIGN KEY de Stadium(id)
 Aqui creamos 2 tablas por el hecho que son entidades fuertes y débil. Le añadimos un FOREIGN KEY por el hecho que en el otro lado tiene 1,* por lo tanto el id de stadium pasa a ser de **Seat**  
-![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/4fa94acc-1c52-4355-89b4-0ba62ff89a25)  
+![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/ffc757c4-dd1d-419e-8c39-df8a1fa1cf5c)  
 Aqui tenemos:  
 - Players_Idol_Players(**idPlayers**,**idIdol**)
   - idPlayers: FOREIGN KEY de Players(id)
