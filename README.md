@@ -43,50 +43,44 @@ Aqui tenemos:
 Aqui tenemos:
 - Partidos(**code**,name_team,game_date, idArbitraje)
   - idArbitraje: FOREIGN KEY de Arbitraje(id)  
-- Entradas(**code**,*codePartidos*)  
- - codePartidos: FOREIGN KEY de Partidos(*code*)  
 Las relaciones con cardinalidad 1:N no generan una tabla. La clave primaria de la entidad que participa en la relación con cardinalidad 1 se guarda en la tabla de la entidad que participa con cardinalidad N.  
 
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/f7d636bb-a02e-4460-948d-75ca902f8467)  
 Aqui tenemos:  
-- Partidos(**code**,name_team,game_date)  
 - Goles(**id**,goles_por_jugador,minute_gol,*codePartidos*)  
- - codePartidos: FOREIGN KEY de Partidos(*code*)  
+  - codePartidos: FOREIGN KEY de Partidos(*code*)  
 Las relaciones con cardinalidad 1:N no generan una tabla. La clave primaria de la entidad que participa en la relación con cardinalidad 1 se guarda en la tabla de la entidad que participa con cardinalidad N.  
 
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/1810f1ff-548c-45d6-a6e0-5d1fa70494b0)  
 Aqui tenemos:  
-- Players(**id**,posicion_Campo,nombre,birth_Date)
-- Portero(**id**, *idPlayers*,gol_por_partido,Paradas_por_partido)  
+- Players(**id**,posicion_Campo,nombre,birth_Date,*idTeams*)
+  - idTeams:FOREIGN KEY de Teams(id)
+- Portero(, **idPlayers**,gol_por_partido,Paradas_por_partido)  
    -idPlayers: FOREIGN KEY de Players(*id*)
-- Jugador_de_Campo(*idPlayers*,Gol_por_partido,Minutos_jugados)  
+- Jugador_de_Campo(**idPlayers**,Gol_por_partido,Minutos_jugados)  
   -idPlayers: FOREIGN KEY de Players(*id*)  
 Aqui creamos una tabla para cada una de las entidades, tanto para la superclase como las subclase. En este caso las subclases tendrían que guardar la clave primaria de la superclase.  
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/18c41207-870a-4ed2-8201-84e57797a450)  
 Aqui tenemos:  
 - Teams(**id**,name_team,name_stadium,ciudadFundada)  
-- Players(**id**,posicion_Campo,nombre,birth_Date,*idTeams*)
-  -idTeams: FOREIGN KEY de Teams(id)  
 La clave primaria de la entidad que participa en la relación con cardinalidad 1 se guarda en la tabla de la entidad que participa con cardinalidad N.  
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/d038ed6b-093d-4974-9ad7-c566d78b2516)  
 Aqui tenemos:  
-- Teams(**id**,name_team,name_stadium,ciudadFundada)
 - Seasons(**code**,date)
 - Presidente(**id**,name,dni,birth_date,año_seleccionado,equipo_lidera)  
 - Teams_Has_Seasons_Has_Presidente(idTeams,codeSeasons,idPresidente)  
   - idTeams: FOREIGN KEY de Teams(id)
   - codeSeasons: FOREIGN KEY de Seasons(code)  
-  - idPresidente: FOREIGN KEY de Presidente(id)
+  - idPresidente: FOREIGN KEY de Presidente(id)  
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/17afce37-103d-4925-a8e5-5c2e71dd500a)  
 Aqui tenemos:
 - Stadium(**id**,name_Stadium)
-- Seat(**id**,nºseat,*idStadium*)
+- Seat(**id**,nºseat,**idStadium**)
   - idStadium: FOREIGN KEY de Stadium(id)
 Aqui creamos 2 tablas por el hecho que son entidades fuertes y débil. Le añadimos un FOREIGN KEY por el hecho que en el otro lado tiene 1,* por lo tanto el id de stadium pasa a ser de **Seat**  
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/4fa94acc-1c52-4355-89b4-0ba62ff89a25)  
 Aqui tenemos:  
-- Players(**id**,posicion_Campo,nombre,birth_Date)
-- Players_Idol_Players(idPlayers,idIdol)
+- Players_Idol_Players(**idPlayers**,**idIdol**)
   - idPlayers: FOREIGN KEY de Players(id)
   - idIdol: FOREIGN KEY de Player(id)  
 Aqui creamos 2 tablas. La tabla Players y una nueva tabla que enlaza con la relacion llamada Players_Idol_Players  
@@ -97,9 +91,7 @@ Aqui tenemos:
   - idArbitraje: FOREIGN KEY de Arbitraje(id)  
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/ff884f55-648f-4d74-b12c-cbb2d580e8cf)  
 Aqui tenemos:  
-- Stadium(**id**,name_stadium)
-- Teams(**id**,ciudadFundada,name_stadium,name_team)
-- Team_Has_Stadium(idStadium,idTeams)
+- Team_Has_Stadium(**idStadium**,**idTeams**)
   - idStadium: FOREIGN KEY de Stadium(id)
   - idTeams: FOREIGN KEY de Teams(id)  
   
