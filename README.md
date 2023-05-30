@@ -48,7 +48,7 @@ Las relaciones con cardinalidad 1:N no generan una tabla. La clave primaria de l
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/a3915432-e6d2-4209-99c0-7416c68f0a2a)  
 Aqui tenemos:  
 - Partidos(**code**,name_team,game_date)  
-- Goles(goles_por_jugador,minute_gol,*codePartidos*)  
+- Goles(**id**,goles_por_jugador,minute_gol,*codePartidos*)  
  - codePartidos: FOREIGN KEY de Partidos(*code*)  
 Las relaciones con cardinalidad 1:N no generan una tabla. La clave primaria de la entidad que participa en la relación con cardinalidad 1 se guarda en la tabla de la entidad que participa con cardinalidad N.  
 
