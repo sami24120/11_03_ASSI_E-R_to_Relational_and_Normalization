@@ -37,7 +37,7 @@ Aqui tenemos:
   - id_personas: FOREIGN KEY de Personas(id)  
   - codePartido: FOREIGN KEY de Partidos(code) 
 - Personas(**id**,name,phone_number)  
-
+Las relaciones con cardinalidad 1:N no generan una tabla. La clave primaria de la entidad que participa en la relación con cardinalidad 1 se guarda en la tabla de la entidad que participa con cardinalidad N.  
 
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/2bc72a18-b48c-427c-b655-fe94cd9d4910)
 Aqui tenemos:
@@ -72,11 +72,13 @@ Aqui tenemos:
   - idTeams: FOREIGN KEY de Teams(id)
   - codeSeasons: FOREIGN KEY de Seasons(code)  
   - idPresidente: FOREIGN KEY de Presidente(id)  
+
+Aqui creamos una tabla auxiliar, ya que se trata de una ternary.
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/17afce37-103d-4925-a8e5-5c2e71dd500a)  
 Aqui tenemos:
 - Stadium(**id**,name_Stadium)
 - Seat(**id**,nºseat,**idStadium**)
-  - idStadium: FOREIGN KEY de Stadium(id)
+  - idStadium: FOREIGN KEY de Stadium(id)  
 Aqui creamos 2 tablas por el hecho que son entidades fuertes y débil. Le añadimos un FOREIGN KEY por el hecho que en el otro lado tiene 1,* por lo tanto el id de stadium pasa a ser de **Seat**  
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/ffc757c4-dd1d-419e-8c39-df8a1fa1cf5c)  
 Aqui tenemos:  
@@ -88,13 +90,18 @@ Aqui creamos 2 tablas. La tabla Players y una nueva tabla que enlaza con la rela
 Aqui tenemos:
 - Arbitraje(**id**,name,faltas_por_partido)
 
+Aqui el id de arbitraje se ira a la tabla Partido que actuara como FK.  
+
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/ff884f55-648f-4d74-b12c-cbb2d580e8cf)  
 Aqui tenemos:  
 - Team_Has_Stadium(**idStadium**,**idTeams**)
   - idStadium: FOREIGN KEY de Stadium(id)
   - idTeams: FOREIGN KEY de Teams(id)  
+
+Aqui creamos una tabla auxiliar ya que la relacion es N:M
   
   ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/2cfa7130-c60f-4ed0-bc04-bab3b02aafcd)  
+  Aqui insertamos **local_team** y **away_team** y lo almacenamos dentro de la entidad **Team**  
 
 
 
