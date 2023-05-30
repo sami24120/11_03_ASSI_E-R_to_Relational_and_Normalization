@@ -41,7 +41,7 @@ Aqui tenemos:
 
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/2bc72a18-b48c-427c-b655-fe94cd9d4910)
 Aqui tenemos:
-- Partidos(**code**,name_team,game_date, idArbitraje)
+- Partidos(**code**,name_team,game_date, idArbitraje,local_team, away_team)
   - idArbitraje: FOREIGN KEY de Arbitraje(id)  
 Las relaciones con cardinalidad 1:N no generan una tabla. La clave primaria de la entidad que participa en la relación con cardinalidad 1 se guarda en la tabla de la entidad que participa con cardinalidad N.  
 
@@ -95,16 +95,9 @@ Aqui tenemos:
   - idTeams: FOREIGN KEY de Teams(id)  
   
   ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/2cfa7130-c60f-4ed0-bc04-bab3b02aafcd)  
-Aqui tenemos:  
-- Partidos(**code**,game_date,name_team)
-- Teams(**id**,name_team,ciudadFundada,name_stadium)
-- Partidos_Local_Teams(codePartidos,idTeams)
-  - codePartidos: FOREIGN KEY de Partidos(code)
-  - idTeams: FOREIGN KEY de Teams(id)
-- Partidos_Visitante_Local(codePartidos,idTeams)
-  - codePartidos: FOREIGN KEY de Partidos(code)
-  - idTeams: FOREIGN KEY de Teams(id)  
-Creamos una nueva tabla donde se almacenan las claves primarias de las dos entidades que participan en la relación. Las claves primarias de las entidades también serán claves primarias de la nueva tabla.
+
+
+
   
 
 ----------------------------------------------------------------------------------------
