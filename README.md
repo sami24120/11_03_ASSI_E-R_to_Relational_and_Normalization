@@ -33,12 +33,11 @@ Este es el modelo Relacional
 
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/6c1cfb32-1f29-4796-929a-c99d8470a3ea)  
 Aqui tenemos:  
-- Entradas(**code**)  
+- Entradas(**code**,id_personas,precio)
+  -id_personas: FOREIGN KEY de Personas(id)  
 - Personas(**id**,name,phone_number)  
-Creamos una tabla porque la relacion tiene un atributo **precio**
-- PERSONA_BUY_ENTRADAS(**codeEntradas**,**idPersonas**,precio)  
-  - codeEntradas: FOREIGN KEY de Entradas(code)
-  - idPersonas: FOREIGN KEY de Personas(id)  
+
+
 ![image](https://github.com/sami24120/11_03_ASSI_E-R_to_Relational_and_Normalization/assets/91737963/2bc72a18-b48c-427c-b655-fe94cd9d4910)
 Aqui tenemos:
 - Partidos(**code**,name_team,game_date)  
