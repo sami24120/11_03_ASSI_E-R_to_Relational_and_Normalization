@@ -19,21 +19,9 @@ CREATE TABLE Partidos (
   name_team VARCHAR(255),
   game_date DATE,
   idArbitraje INT,
+  local_team VARCHAR(30),
+  away_team VARCHAR(30),
   FOREIGN KEY (idPartidos) REFERENCES Arbitraje(id)
-);
-// Hay que modificar
-CREATE TABLE Partidos_Local_Teams(
-  codePartido INT,
-  idTeams INT,
-  FOREIGN KEY (codePartido) REFERENCES Partido(code),
-  FOREIGN KEY (idTeams) REFERENCES Teams(id)
-);
-
-CREATE TABLE Partidos_Visitante_Teams(
-  codePartido INT,
-  idTeams INT,
-  FOREIGN KEY (codePartido) REFERENCES Partido(code),
-  FOREIGN KEY(idTeams) REFERENCES Teams(id)
 );
 
 CREATE TABLE Arbitraje(
